@@ -3,7 +3,7 @@ This fork of StartGPT (StartGPT) allows you to choose the LLM that you use for e
 
 Join the community for StartGPT!
 
-https://thinktank.ottomator.ai
+https://khulnasoft.slack.com
 
 ## Whats StartGPT
 

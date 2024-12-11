@@ -41,9 +41,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/khulnasoft/startgpt
       name: Startgpt.Local
-    - icon: fontawesome/brands/discourse
-      link: https://thinktank.ottomator.ai/
-      name: Startgpt.Local Discourse
+    - icon: fontawesome/brands/Slack
+      link: https://khulnasoft.slack.com/
+      name: Startgpt.Local Slack
 
 
 markdown_extensions:
