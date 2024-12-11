@@ -122,7 +122,7 @@ export const ModelSelector = ({
         {[...modelList]
           .filter((e) => e.provider == provider?.name && e.name)
           .map((modelOption, index) => (
-             <option key={index} value={modelOption.name}>
+            <option key={index} value={modelOption.name}>
               {modelOption.label}
             </option>
           ))}

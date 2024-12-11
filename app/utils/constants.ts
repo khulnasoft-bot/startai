@@ -387,7 +387,7 @@ async function getOllamaModels(): Promise<ModelInfo[]> {
       maxTokenAllowed: 8000,
     }));
   } catch (e: any) {
-     logger.warn('Failed to get Ollama models: ', e.message || '');
+    logger.warn('Failed to get Ollama models: ', e.message || '');
     return [];
   }
 }
@@ -475,7 +475,7 @@ async function getLMStudioModels(): Promise<ModelInfo[]> {
       provider: 'LMStudio',
     }));
   } catch (e: any) {
-     logger.warn('Failed to get LMStudio models: ', e.message || '');
+    logger.warn('Failed to get LMStudio models: ', e.message || '');
     return [];
   }
 }
@@ -494,7 +494,7 @@ async function initializeModelList(): Promise<ModelInfo[]> {
       }
     }
   } catch (error: any) {
-     logger.warn(`Failed to fetch apikeys from cookies: ${error?.message}`);
+    logger.warn(`Failed to fetch apikeys from cookies: ${error?.message}`);
   }
   MODEL_LIST = [
     ...(

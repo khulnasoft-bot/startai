@@ -352,7 +352,9 @@ export const SettingsWindow = ({ open, onClose }: SettingsProps) => {
                           {/* Base URL input for configurable providers */}
                           {URL_CONFIGURABLE_PROVIDERS.includes(provider.name) && provider.isEnabled && (
                             <div className="mt-2">
-                              <label className="block text-sm text-startgpt-elements-textSecondary mb-1">Base URL:</label>
+                              <label className="block text-sm text-startgpt-elements-textSecondary mb-1">
+                                Base URL:
+                              </label>
                               <input
                                 type="text"
                                 value={baseUrls[provider.name]}
@@ -369,7 +371,9 @@ export const SettingsWindow = ({ open, onClose }: SettingsProps) => {
                   {activeTab === 'features' && (
                     <div className="p-4 bg-startgpt-elements-bg-depth-2 border border-startgpt-elements-borderColor rounded-lg mb-4">
                       <div className="mb-6">
-                        <h3 className="text-lg font-medium text-startgpt-elements-textPrimary mb-4">Optional Features</h3>
+                        <h3 className="text-lg font-medium text-startgpt-elements-textPrimary mb-4">
+                          Optional Features
+                        </h3>
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-startgpt-elements-textPrimary">Debug Info</span>
                           <Switch className="ml-auto" checked={isDebugEnabled} onCheckedChange={handleToggleDebug} />
@@ -421,14 +425,20 @@ export const SettingsWindow = ({ open, onClose }: SettingsProps) => {
 
                       <h4 className="text-md font-medium text-startgpt-elements-textPrimary mt-4">Base URLs</h4>
                       <ul>
-                        <li className="text-startgpt-elements-textSecondary">Ollama: {process.env.REACT_APP_OLLAMA_URL}</li>
-                        <li className="text-startgpt-elements-textSecondary">OpenAI: {process.env.REACT_APP_OPENAI_URL}</li>
+                        <li className="text-startgpt-elements-textSecondary">
+                          Ollama: {process.env.REACT_APP_OLLAMA_URL}
+                        </li>
+                        <li className="text-startgpt-elements-textSecondary">
+                          OpenAI: {process.env.REACT_APP_OPENAI_URL}
+                        </li>
                         <li className="text-startgpt-elements-textSecondary">
                           LM Studio: {process.env.REACT_APP_LM_STUDIO_URL}
                         </li>
                       </ul>
 
-                      <h4 className="text-md font-medium text-startgpt-elements-textPrimary mt-4">Version Information</h4>
+                      <h4 className="text-md font-medium text-startgpt-elements-textPrimary mt-4">
+                        Version Information
+                      </h4>
                       <p className="text-startgpt-elements-textSecondary">Version Hash: {versionHash}</p>
                     </div>
                   )}
