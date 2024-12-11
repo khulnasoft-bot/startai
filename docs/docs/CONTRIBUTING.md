@@ -4,7 +4,7 @@
 
 The `DEFAULT_NUM_CTX` environment variable can be used to limit the maximum number of context values used by the qwen2.5-coder model. For example, to limit the context to 24576 values (which uses 32GB of VRAM), set `DEFAULT_NUM_CTX=24576` in your `.env.local` file.
 
-First off, thank you for considering contributing to Startgpt! This fork aims to expand the capabilities of the original project by integrating multiple LLM providers and enhancing functionality. Every contribution helps make Startgpt a better tool for developers worldwide.
+First off, thank you for considering contributing to StartGPT! This fork aims to expand the capabilities of the original project by integrating multiple LLM providers and enhancing functionality. Every contribution helps make StartGPT a better tool for developers worldwide.
 
 ## 📋 Table of Contents
 - [Code of Conduct](#code-of-conduct)
@@ -148,10 +148,10 @@ You can use Docker's target feature to specify the build environment:
 
 ```bash
 # Development build
-docker build . --target startgpt-ai-development
+docker build . --target startgpt-development
 
 # Production build
-docker build . --target startgpt-ai-production
+docker build . --target startgpt-production
 ```
 
 ### 3. Docker Compose with Profiles
@@ -172,10 +172,10 @@ After building using any of the methods above, run the container with:
 
 ```bash
 # Development
-docker run -p 5173:5173 --env-file .env.local startgpt-ai:development
+docker run -p 5173:5173 --env-file .env.local startgpt:development
 
 # Production
-docker run -p 5173:5173 --env-file .env.local startgpt-ai:production
+docker run -p 5173:5173 --env-file .env.local startgpt:production
 ```
 
 ## Deployment with Coolify

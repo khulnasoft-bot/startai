@@ -1,10 +1,10 @@
 services:
   app-prod:
-    image: startgpt-ai:production
+    image: startgpt:production
     build:
       context: .
       dockerfile: Dockerfile
-      target: startgpt-ai-production
+      target: startgpt-production
     ports:
       - "5173:5173"
     env_file: ".env.local"
@@ -32,9 +32,9 @@ services:
       - production
 
   app-dev:
-    image: startgpt-ai:development
+    image: startgpt:development
     build:
-      target: startgpt-ai-development
+      target: startgpt-development
     environment:
       - NODE_ENV=development
       - VITE_HMR_PROTOCOL=ws

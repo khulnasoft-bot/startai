@@ -1,28 +1,28 @@
 # Welcome to OTTO Dev
-This fork of Startgpt (oTToDev) allows you to choose the LLM that you use for each prompt! Currently, you can use OpenAI, Anthropic, Ollama, OpenRouter, Gemini, LMStudio, Mistral, xAI, HuggingFace, DeepSeek, or Groq models - and it is easily extended to use any other model supported by the Vercel AI SDK! See the instructions below for running this locally and extending it to include more models.
+This fork of StartGPT (StartGPT) allows you to choose the LLM that you use for each prompt! Currently, you can use OpenAI, Anthropic, Ollama, OpenRouter, Gemini, LMStudio, Mistral, xAI, HuggingFace, DeepSeek, or Groq models - and it is easily extended to use any other model supported by the Vercel AI SDK! See the instructions below for running this locally and extending it to include more models.
 
-Join the community for oTToDev!
+Join the community for StartGPT!
 
-https://thinktank.ottomator.ai
+https://khulnasoft.slack.com
 
-## Whats Startgpt
+## Whats StartGPT
 
-Startgpt is an AI-powered web development agent that allows you to prompt, run, edit, and deploy full-stack applications directly from your browser—no local setup required. If you're here to build your own AI-powered web dev agent using the Startgpt open source codebase, [click here to get started!](./CONTRIBUTING.md)
+StartGPT is an AI-powered web development agent that allows you to prompt, run, edit, and deploy full-stack applications directly from your browser—no local setup required. If you're here to build your own AI-powered web dev agent using the Startgpt open source codebase, [click here to get started!](./CONTRIBUTING.md)
 
-## What Makes Startgpt Different
+## What Makes StartGPT Different
 
-Claude, v0, etc are incredible- but you can't install packages, run backends, or edit code. That’s where Startgpt stands out:
+Claude, v0, etc are incredible- but you can't install packages, run backends, or edit code. That’s where StartGPT stands out:
 
-- **Full-Stack in the Browser**: Startgpt integrates cutting-edge AI models with an in-browser development environment powered by **KhulnaSoft’s WebContainers**. This allows you to:
+- **Full-Stack in the Browser**: StartGPT integrates cutting-edge AI models with an in-browser development environment powered by **NxPKG’s WebContainers**. This allows you to:
   - Install and run npm tools and libraries (like Vite, Next.js, and more)
   - Run Node.js servers
   - Interact with third-party APIs
   - Deploy to production from chat
   - Share your work via a URL
 
-- **AI with Environment Control**: Unlike traditional dev environments where the AI can only assist in code generation, Startgpt gives AI models **complete control** over the entire  environment including the filesystem, node server, package manager, terminal, and browser console. This empowers AI agents to handle the whole app lifecycle—from creation to deployment.
+- **AI with Environment Control**: Unlike traditional dev environments where the AI can only assist in code generation, StartGPT gives AI models **complete control** over the entire  environment including the filesystem, node server, package manager, terminal, and browser console. This empowers AI agents to handle the whole app lifecycle—from creation to deployment.
 
-Whether you’re an experienced developer, a PM, or a designer, Startgpt allows you to easily build production-grade full-stack applications.
+Whether you’re an experienced developer, a PM, or a designer, StartGPT allows you to easily build production-grade full-stack applications.
 
 For developers interested in building their own AI-powered development tools with WebContainers, check out the open-source Startgpt codebase in this repo!
 
@@ -106,10 +106,10 @@ You can use Docker's target feature to specify the build environment instead of 
 
 ```bash
 # Development build
-docker build . --target startgpt-ai-development
+docker build . --target startgpt-development
 
 # Production build
-docker build . --target startgpt-ai-production
+docker build . --target startgpt-production
 ```
 
 ### 2. Docker Compose with Profiles to Run the Container
@@ -148,34 +148,9 @@ sudo npm install -g pnpm
 pnpm run dev
 ```
 
-## Super Important Note on Running Ollama Models
-
-Ollama models by default only have 2048 tokens for their context window. Even for large models that can easily handle way more.
-This is not a large enough window to handle the Startgpt/oTToDev prompt! You have to create a version of any model you want
-to use where you specify a larger context window. Luckily it's super easy to do that.
-
-All you have to do is:
-
-- Create a file called "Modelfile" (no file extension) anywhere on your computer
-- Put in the two lines:
-
-```
-FROM [Ollama model ID such as qwen2.5-coder:7b]
-PARAMETER num_ctx 32768
-```
-
-- Run the command: 
-
-```
-ollama create -f Modelfile [your new model ID, can be whatever you want (example: qwen2.5-coder-extra-ctx:7b)]
-```
-
-Now you have a new Ollama model that isn't heavily limited in the context length like Ollama models are by default for some reason.
-You'll see this new model in the list of Ollama models along with all the others you pulled!
-
 ## Adding New LLMs:
 
-To make new LLMs available to use in this version of Startgpt, head on over to `app/utils/constants.ts` and find the constant MODEL_LIST. Each element in this array is an object that has the model ID for the name (get this from the provider's API documentation), a label for the frontend model dropdown, and the provider. 
+To make new LLMs available to use in this version of StartGPT, head on over to `app/utils/constants.ts` and find the constant MODEL_LIST. Each element in this array is an object that has the model ID for the name (get this from the provider's API documentation), a label for the frontend model dropdown, and the provider. 
 
 By default, Anthropic, OpenAI, Groq, and Ollama are implemented as providers, but the YouTube video for this repo covers how to extend this to work with more providers if you wish!
 
@@ -204,7 +179,7 @@ This will start the Remix Vite development server. You will need Google Chrome C
 
 ## Tips and Tricks
 
-Here are some tips to get the most out of Startgpt:
+Here are some tips to get the most out of StartGPT:
 
 - **Be specific about your stack**: If you want to use specific frameworks or libraries (like Astro, Tailwind, ShadCN, or any other popular JavaScript framework), mention them in your initial prompt to ensure Startgpt scaffolds the project accordingly.
 
