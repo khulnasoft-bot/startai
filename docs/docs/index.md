@@ -13,7 +13,7 @@ StartGPT is an AI-powered web development agent that allows you to prompt, run, 
 
 Claude, v0, etc are incredible- but you can't install packages, run backends, or edit code. That’s where StartGPT stands out:
 
-- **Full-Stack in the Browser**: StartGPT integrates cutting-edge AI models with an in-browser development environment powered by **StackBlitz’s WebContainers**. This allows you to:
+- **Full-Stack in the Browser**: StartGPT integrates cutting-edge AI models with an in-browser development environment powered by **NxPKG’s WebContainers**. This allows you to:
   - Install and run npm tools and libraries (like Vite, Next.js, and more)
   - Run Node.js servers
   - Interact with third-party APIs

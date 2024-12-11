@@ -8,7 +8,7 @@ import { Header } from '~/components/header/Header';
 export const meta: MetaFunction = () => {
   return [
     { title: 'Startgpt' },
-    { name: 'description', content: 'Talk with Startgpt, an AI assistant from StackBlitz' },
+    { name: 'description', content: 'Talk with Startgpt, an AI assistant from KhulnaSoft' },
   ];
 };
 
